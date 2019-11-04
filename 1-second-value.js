@@ -7,6 +7,11 @@ Sample:
 [2, 3] => (2, 3)
 */
 // Solution
+
+/**
+ * 
+ * @param {array} numbers 
+ */
 function secondValues(numbers) {
     const asendingSortedNumbers = numbers.sort((a, b) => a - b);
     const uniqueNumbers = [...new Set(asendingSortedNumbers)];
