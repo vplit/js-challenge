@@ -1,6 +1,8 @@
 /**
  * Get first longest word from given sentence
+ * 
  * @param {string} sentence 
+ * 
  * @returns {string}
  */
 function getLongestWord(sentence) {
@@ -13,14 +15,15 @@ function getLongestWord(sentence) {
         }
     }
 
-    console.log(longestWord);
     return longestWord;
 }
 
 /**
- * Get list of longest words
+ * Get list of longest words from given sentence
+ * 
  * @param {string} sentence 
- * @return array
+ * 
+ * @returns array
  */
 function getLongestWords(sentence) {
     let words = sentence.split(" ");
@@ -41,11 +44,11 @@ function getLongestWords(sentence) {
 }
 
 /**
- * Get list of longest words by buil in function in JS
+ * Get list of longest words by build in function in JS
  * @param {string} sentence 
  * @returns {array}
  */
-function getLongestWordBuilIn(sentence) {
+function getLongestWordsByBuildInFunctions(sentence) {
     let words = sentence.split(" ");
     let sortedWords = words.sort((a, b) => b.length - a.length);
 
@@ -58,4 +61,4 @@ function getLongestWordBuilIn(sentence) {
 
 console.log(getLongestWord("I am ready for today123"));
 console.log(getLongestWords("I am today123 ready for today123"));
-console.log(getLongestWordBuilIn("I today123 am ready for today123"));
+console.log(getLongestWordBuilIn("I today am ready for today"));

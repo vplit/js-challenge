@@ -1,10 +1,16 @@
 /**
- * Give a string. write the program to determine whether all character are unique or not
+ * Give a string. write the program to determine whether all characters are unique or not
+ * 
  * Example
  * 'abcd' return 'true', all character are uinque.
  * 'aabcd' return 'false', because a character is duplicated.
  */
 
+/**
+ * 
+ * @param {string} str 
+ * @returns boolean
+ */
 function isUniqueLettersWithArray(str){
     let letters = [];
 
@@ -19,6 +25,10 @@ function isUniqueLettersWithArray(str){
     return true;
 }
 
+/**
+ * @param {string} str 
+ * @returns boolean
+ */
 function isUniqueLettersWithObject(str) {
     let dictionary = {};
 
@@ -33,6 +43,11 @@ function isUniqueLettersWithObject(str) {
     return true;
 }
 
+
+/**
+ * @param {string} str 
+ * @returns boolean
+ */
 function isUniqueLettersWithLastIndex(str) {
     for(let i = 0; i < str.length; i++){
         if(str.lastIndexOf(str[i]) > i){
@@ -43,16 +58,16 @@ function isUniqueLettersWithLastIndex(str) {
     return true;
 }
 
+/**
+ * @param {string} str 
+ * @returns boolean
+ */
 function isUniqueLettersUseSet(str) {
     let lettersInSet = new Set(str);
-    if(lettersInSet.size < str.length){
-        return false;
-    }else{
-        return true;
-    }
+    return lettersInSet.size === str.length;
 }
 
 console.log(isUniqueLettersWithArray("abeffcabcef"));
 console.log(isUniqueLettersWithObject("abcef"));
 console.log(isUniqueLettersWithLastIndex("abcef"));
-console.log(isUniqueLettersUseSet("abcef"));
+console.log(isUniqueLettersUseSet("abceff"));

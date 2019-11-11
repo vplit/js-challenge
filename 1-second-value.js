@@ -6,6 +6,7 @@ Sample:
 [1] => (1)
 [2, 3] => (2, 3)
 */
+
 // Solution
 
 /**
@@ -16,7 +17,7 @@ function secondValues(numbers) {
     const asendingSortedNumbers = numbers.sort((a, b) => a - b);
     const uniqueNumbers = [...new Set(asendingSortedNumbers)];
 
-    if(uniqueNumbers.length <= 0){
+    if(!uniqueNumbers.length){
         return "()";
     }
 
