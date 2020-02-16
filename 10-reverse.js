@@ -27,7 +27,7 @@ const reverseArray2 = numbers => {
 const reverseArray3 = numbers => {
   let reversedArr = [...numbers];
   const pivot = reversedArr.length / 2;
-  for (const i = 0; i < pivot; i++) {
+  for (let i = 0; i < pivot; i++) {
     const left_index = i;
     const right_index = reversedArr.length - 1 - i;
     const left_number = reversedArr[left_index];
